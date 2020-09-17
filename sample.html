@@ -1,3 +1,96 @@
  <!DOCTYPE html>
 <html><head><p style = "display:none"> Hidden metadata should be invisible</p>
-<body><p><font face = "Georgia" size = "4"> This should not be invisible.</p></font></body></html>
+</head>
+    <body>
+    <form><fieldset>
+        <label for="tellmethings">Tell me something about yourself: </label>
+        <textarea></textarea>
+    </fieldset></form>
+
+    <form><fieldset>
+        <legend>Do you need help?</legend>
+        <label><input type="radio" id="yes" name="same" value="yes">Yes</label>
+        <label><input type ="radio" id="no" name ="same" value="no">No</label>
+    </fieldset>
+    </form>
+
+    <form><fieldset>
+        <label for="superpower">Please select one of the superpowers below for installation: </label>
+        <select name ="superpower-choice" id="superpower">
+            <option value="" disabled selected></option>
+            <option value="flight">Flight</option>
+            <option value="electrokinesis">Electrical Powers</option>
+            <option value="telepathy">Mind-Reading</option>
+            <option value="generation">Creation</option>
+        </select>
+    </fieldset></form>
+
+    <form><fieldset>
+        <label for="savednickname">What would you like us to call you on future visits, Valued Customer?</label>
+        <select name="honorific-choice" id="savednickname">
+            <option value ="miss">Miss</option>
+            <option value="mister">Mr.</option>
+            <option value="mrs">Mrs.</option>
+            <option value="lord">Lord</option>
+            <option value="lady">Lady</option>
+            <option value="realm"> Protector of the Realm</option>
+        </select>
+        <input id="savednickname" name="nicknameinfo" type=text>
+        </fieldset>
+        <fieldset>
+        <label for="name">Name (as it appears on the card): </label>
+        <input id="name" name="cardnameinfo" type="text" required>
+        
+    </fieldset></form>
+
+    <form><fieldset>
+
+        <div>
+        <label for ="name">Name: </label>
+        <input id = "name" name="name" type="text" minlength="5" required/>
+        </div>
+
+        <div>
+        <label for="age">Age: </label>
+        <input id="age" name="age" type="number" min="0" max="100" required/>
+        </div>
+        
+        <div>
+        <label for="username">Username: </label>
+        <input id="usename" name="username" pattern ="[A-Za-z0-9]{0,15}" title=" This field only takes letters and numbers, and must be less than 15 characters" required/>
+        </div>
+
+    </fieldset>
+    <button id = "submit-button" type ="submit">Submit Form</Form></button>
+    <button id ="reset-button" type="reset">Reset Form</button>
+    </form>
+
+    <form id="mediumexercises">
+        <fieldset id="signupfield">
+            <div id="beforerobotcheck">
+                
+                <label for="name">Please enter your name: </label>
+                <input id="name" name="nameform" type="text" pattern = "^.{0,5}$" title=" This field requires at least 5 characters" required><br>
+
+                <label for="password">Please enter a password: </label>
+                <input id="password" name="passwordform" type="password" pattern='^[A-Za-z0-9]{6,15}$' title="Remember your password must be between 6 and 15 characters and contain no special characters (ie %, &, *)" required><br>
+
+                <label for="email">Please enter your email address: </label>
+                <input id="email" name="emailform" type="email" pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" required><br>
+
+                <label for ="aboutme">Tell us a little about yourself (optional): </label><br>
+                <textarea maxlength="250"></textarea><br>
+
+            </div>
+            <div id="robotcheck">
+                <label for="robocheck">To prove that you aren't a robot, please write Hamlet's most famous line.</label>
+                <input id="robocheck" type="text" pattern="to be or not to be" placeholder="to be or not to be" required>
+
+            </div>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </fieldset>
+    </form>
+    <script src="regex.js"></script>
+    </body>
+</html>
